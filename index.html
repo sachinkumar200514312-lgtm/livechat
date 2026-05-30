@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>LiveChat</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{
+background:#000;
+color:#fff;
+padding:15px;
+}
+
+.logo{
+font-size:42px;
+font-weight:700;
+margin-bottom:20px;
+text-align:center;
+color:#fff;
+}
+
+.top-btn{
+display:block;
+width:100%;
+padding:26px;
+margin-bottom:16px;
+border-radius:24px;
+text-decoration:none;
+font-size:28px;
+font-weight:700;
+color:#fff;
+text-align:center;
+}
+
+.b1{background:linear-gradient(90deg,#42d392,#5fd5ff);}
+.b2{background:linear-gradient(90deg,#ff3d54,#ff5c8a);}
+.b3{background:linear-gradient(90deg,#ff3ca0,#ff7c43);}
+.b4{background:linear-gradient(90deg,#a64dff,#ff4dc4);}
+
+.card{
+background:#081327;
+border-radius:28px;
+padding:20px;
+margin-bottom:24px;
+text-align:center;
+}
+
+.card img{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:26px;
+border:4px solid #ff4ea0;
+}
+
+.name{
+font-size:34px;
+font-weight:700;
+margin-top:12px;
+}
+
+.city{
+color:#2fd49d;
+font-size:24px;
+margin-top:8px;
+}
+
+.call-btn{
+display:inline-block;
+margin-top:18px;
+padding:16px 34px;
+background:#16d36b;
+color:white;
+border-radius:16px;
+text-decoration:none;
+font-size:24px;
+font-weight:700;
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo">🔥 LiveChat</div>
+
+<a class="top-btn b1" href="https://cutt.ly/6tMNOcup">कुंवारी लड़कियों से बात करे</a>
+
+<a class="top-btn b2" href="https://cutt.ly/CtZEDpj2">लड़कियों से वीडियो कॉल करे</a>
+
+<a class="top-btn b3" href="https://whatsapp.com/channel/0029VbCHZOAEAKWDDcD95H24">लड़कियों से बात करे</a>
+
+<a class="top-btn b4" href="https://t.me/fitfusion966">मेरा वीडियो देखे</a>
+
+
+<div id="profiles"></div>
+
+<script>
+
+const links=[
+"https://cutt.ly/6tMNOcup",
+"https://cutt.ly/CtZEDpj2",
+"https://whatsapp.com/channel/0029VbCHZOAEAKWDDcD95H24",
+"https://t.me/fitfusion966"
+];
+
+const profiles=[
+{
+name:"Riya Patel",
+city:"Ahmedabad",
+img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+},
+{
+name:"Neha Sharma",
+city:"Mumbai",
+img:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+},
+{
+name:"Kavya",
+city:"Delhi",
+img:"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df"
+},
+{
+name:"Pooja",
+city:"Pune",
+img:"https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+},
+{
+name:"Anjali",
+city:"Jaipur",
+img:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1"
+},
+{
+name:"Priya",
+city:"Lucknow",
+img:"https://images.unsplash.com/photo-1517841905240-472988babdf9"
+},
+{
+name:"Sneha",
+city:"Kolkata",
+img:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+},
+{
+name:"Aarti",
+city:"Indore",
+img:"https://images.unsplash.com/photo-1521119989659-a83eee488004"
+},
+{
+name:"Shalini",
+city:"Surat",
+img:"https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91"
+},
+{
+name:"Meera",
+city:"Bhopal",
+img:"https://images.unsplash.com/photo-1521572267360-ee0c2909d518"
+},
+{
+name:"Komal",
+city:"Nagpur",
+img:"https://images.unsplash.com/photo-1515886657613-9f3515b0c78f"
+},
+{
+name:"Isha",
+city:"Raipur",
+img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+}
+];
+
+let html="";
+
+profiles.forEach((p,i)=>{
+
+let link=links[i%4];
+
+html+=`
+<div class="card">
+<img src="${p.img}">
+<div class="name">${p.name}</div>
+<div class="city">● Online • ${p.city}</div>
+<a class="call-btn" href="${link}">
+Call Now
+</a>
+</div>
+`;
+
+});
+
+document.getElementById("profiles").innerHTML=html;
+
+</script>
+
+</body>
+</html>
